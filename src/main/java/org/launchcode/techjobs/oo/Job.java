@@ -20,28 +20,36 @@ public class Job {
         id=nextId;
         nextId++;}
 
-    public Job(String name,Employer employer,Location location,PositionType positionType,CoreCompetancy coreCompetancy){
+    public Job(String name,Employer employer,Location location,PositionType positionType,CoreCompetency coreCompetency){
         this();
         this.name= name;
         this.employer=employer;
         this.location=location;
         this.positionType=positionType;
-        this.coreCompetency=coreCompetancy;
+        this.coreCompetency=coreCompetency;
+    }
+
+    @Override
+    public String toString() {
+        return (id+ name + employer + location+ positionType +coreCompetency);
     }
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
-@   @Override
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        if (!super.equals(object)) return false;
-        Job job = (Job) object;
-        return id == job.id && java.util.Objects.equals(name, job.name) && java.util.Objects.equals(employer, job.employer) && java.util.Objects.equals(location, job.location) && java.util.Objects.equals(positionType, job.positionType) && java.util.Objects.equals(coreCompetency, job.coreCompetency);
+
+    public boolean equals(Object o) {  // Two objects are equal if they have the same id.
+        if (this == o) return true;
+        if (!(o instanceof Job)) return false;
+        Job job = (Job) o;
+        return getId() == job.getId();
     }
+
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), id, name, employer, location, positionType, coreCompetency);
+        return Objects.hash(getId());
     }
+
+
+
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
