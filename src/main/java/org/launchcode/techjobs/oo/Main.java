@@ -9,7 +9,7 @@ public class Main {
         Job job2 = new Job("Web Developer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Front-end developer"), new CoreCompetency("JavaScript"));
         Job job3 = new Job("Ice cream tester", new Employer(""), new Location("Home"), new PositionType("UX"), new CoreCompetency("Tasting ability"));
 
-        System.out.println(job1.getEmployer() instanceof Employer);
+        System.out.println("\n"+ "ID: "+ job1.getId() + "\n"+ "Name: "+ job1.getName()+ "\n"+ "Employer: "+ job1.getEmployer()+ "\n"+ "Location: "+ job1.getLocation()+ "\n"+ "Position: " + job1.getPositionType()+ "\n"+ "Core Competency: " + job1.getCoreCompetency()+"\n");
 
 
         ArrayList<Job> jobs = new ArrayList<>();

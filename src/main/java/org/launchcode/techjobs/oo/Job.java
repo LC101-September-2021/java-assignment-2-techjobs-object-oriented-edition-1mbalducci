@@ -31,12 +31,13 @@ public class Job {
 
     @Override
     public String toString() {
-        return (id+ name + employer + location+ positionType +coreCompetency);
+        return ("\n"+ id+ name + employer + location+ positionType +coreCompetency+"\n");
     }
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
+        System.out.println("I am not here");
         if (this == o) return true;
         if (!(o instanceof Job)) return false;
         Job job = (Job) o;
