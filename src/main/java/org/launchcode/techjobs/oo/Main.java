@@ -10,7 +10,8 @@ public class Main {
         Job job3 = new Job("Ice cream tester", new Employer(""), new Location("Home"), new PositionType("UX"), new CoreCompetency("Tasting ability"));
 
         System.out.println("\n"+ "ID: "+ job1.getId() + "\n"+ "Name: "+ job1.getName()+ "\n"+ "Employer: "+ job1.getEmployer()+ "\n"+ "Location: "+ job1.getLocation()+ "\n"+ "Position: " + job1.getPositionType()+ "\n"+ "Core Competency: " + job1.getCoreCompetency()+"\n");
-
+        System.out.println("This is empty"+ job3.getEmployer()+ "see?"
+        );
 
         ArrayList<Job> jobs = new ArrayList<>();
         jobs.add(job1);

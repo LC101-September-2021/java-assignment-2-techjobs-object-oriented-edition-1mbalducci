@@ -31,7 +31,7 @@ public class Job {
 
     @Override
     public String toString() {
-        return ("\n"+ id+ name + employer + location+ positionType +coreCompetency+"\n");
+        return ("\n"+ "ID: "+ this.getId() + "\n"+ "Name: "+ this.getName()+ "\n"+ "Employer: "+ this.getEmployer()+ "\n"+ "Location: "+ this.getLocation()+ "\n"+ "Position: " + this.getPositionType()+ "\n"+ "Core Competency: " + this.getCoreCompetency()+"\n");
     }
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.

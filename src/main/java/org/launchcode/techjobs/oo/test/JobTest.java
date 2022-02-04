@@ -52,8 +52,17 @@ public class JobTest {
         assertTrue(job1.toString().startsWith("\n"));
     }
     @Test
-    public void testT() {
+    public void testToStringContainsAllFieldsAndData() {
         Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertEquals(job1.toString(),"\n"+ "ID: "+ job1.getId() + "\n"+ "Name: "+ job1.getName()+ "\n"+ "Employer: "+ job1.getEmployer()+ "\n"+ "Location: "+ job1.getLocation()+ "\n"+ "Position: " + job1.getPositionType()+ "\n"+ "Core Competency: " + job1.getCoreCompetency()+"\n");
     }
+
+//    @Test
+//    public void ifAFieldIsEmptyThrowsAMessage(){
+//        Job job1 = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+//        assertEquals("Data not Available", job1.getEmployer());
+//    }
+
+
+
     }
