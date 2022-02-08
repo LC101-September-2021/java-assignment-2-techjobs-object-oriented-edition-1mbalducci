@@ -16,6 +16,15 @@ public class Employer extends JobField{
     public Employer(String value) {
         super(value);
     }
+
+//    @Override
+//    public String toString() {
+//        if(super (value) != "")
+//            return value;
+//        else {
+//            return "Data Not Available";
+//        }
+//    }
 //
 //    // Custom toString, equals, and hashCode methods:
 //

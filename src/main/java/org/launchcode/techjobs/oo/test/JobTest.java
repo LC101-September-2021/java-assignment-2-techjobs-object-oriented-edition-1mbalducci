@@ -57,12 +57,17 @@ public class JobTest {
         assertEquals(job1.toString(),"\n"+ "ID: "+ job1.getId() + "\n"+ "Name: "+ job1.getName()+ "\n"+ "Employer: "+ job1.getEmployer()+ "\n"+ "Location: "+ job1.getLocation()+ "\n"+ "Position: " + job1.getPositionType()+ "\n"+ "Core Competency: " + job1.getCoreCompetency()+"\n");
     }
 
-//    @Test
-//    public void ifAFieldIsEmptyThrowsAMessage(){
-//        Job job1 = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-//        assertEquals("Data not Available", job1.getEmployer());
-//    }
+    @Test
+    public void ifAFieldIsEmptyThrowsAMessage(){
+        Job job1 = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertEquals("Data Not Available", job1.getEmployer().toString());
+    }
 
+    @Test
+    public void ifNoDataButId(){
+        Job job1 = new Job();
+        assertEquals("OOPS! This job does not seem to exist.", job1.toString());
+    }
 
 
     }

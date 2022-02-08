@@ -31,7 +31,12 @@ public class Job {
 
     @Override
     public String toString() {
-        return ("\n"+ "ID: "+ this.getId() + "\n"+ "Name: "+ this.getName()+ "\n"+ "Employer: "+ this.getEmployer()+ "\n"+ "Location: "+ this.getLocation()+ "\n"+ "Position: " + this.getPositionType()+ "\n"+ "Core Competency: " + this.getCoreCompetency()+"\n");
+
+        if (((this.getName() == null) && (this.getEmployer() == null) && (this.getLocation() == null) && this.getPositionType() == null && (this.getCoreCompetency() == null))) {
+            return "OOPS! This job does not seem to exist.";
+        } else {
+            return ("\n" + "ID: " + this.getId() + "\n" + "Name: " + this.getName() + "\n" + "Employer: " + this.getEmployer() + "\n" + "Location: " + this.getLocation() + "\n" + "Position: " + this.getPositionType() + "\n" + "Core Competency: " + this.getCoreCompetency() + "\n");
+        }
     }
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
