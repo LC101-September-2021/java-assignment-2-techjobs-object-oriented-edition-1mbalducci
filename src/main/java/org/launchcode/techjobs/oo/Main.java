@@ -13,7 +13,7 @@ public class Main {
 //        System.out.println("This is empty"+ job3.getEmployer()+ "see?"
 //        );
 
-        System.out.println(job1.toString());
+//        System.out.println(job1.toString());
 
         ArrayList<Job> jobs = new ArrayList<>();
         jobs.add(job1);

@@ -47,7 +47,7 @@ public class JobTest {
     @Test
     public void testToStringStartsAndEndsWithABlackLine(){
         Job job1 =  new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        System.out.println(job1.toString());
+//        System.out.println(job1.toString());
         assertTrue(job1.toString().endsWith("\n"));
         assertTrue(job1.toString().startsWith("\n"));
     }

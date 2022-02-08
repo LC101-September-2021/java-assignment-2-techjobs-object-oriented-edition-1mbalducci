@@ -38,9 +38,9 @@ public class PositionType extends JobField{
 
 
 
-    @Override
-    public int hashCode() {return Objects.hash(getId());
-    }
+//    @Override
+//    public int hashCode() {return Objects.hash(getId());
+//    }
 
     // Getters and Setters:
 

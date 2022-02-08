@@ -42,7 +42,6 @@ public class Job {
     //  match.
 
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
-        System.out.println("I am not here");
         if (this == o) return true;
         if (!(o instanceof Job)) return false;
         Job job = (Job) o;

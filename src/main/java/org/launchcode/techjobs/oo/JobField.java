@@ -27,22 +27,22 @@ public abstract class JobField {
         }
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (!(o instanceof JobField)) return false;
-//        JobField that = (JobField) o;
-//        return getId() == JobField.getId();
-//    }
-//
-// ;
-//
-//
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(getId());
-//    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof JobField)) return false;
+        JobField jobfield = (JobField) o;
+        return getId() == jobfield.getId();
+    }
+
+ 
+
+
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
 
     public int getId(){
         return id;
